@@ -44,9 +44,6 @@ async fn health_check_works() {
 
 async fn spawn_app() -> TestApp {
     Lazy::force(&TRACING);
-
-    let subscriber = get_subscriber("test".into(), "debug".into(), std::io::stdout);
-    init_subscriber(subscriber);
     let listener = TcpListener::bind("127.0.0.1:0").expect("Failed to bind random port");
     let port = listener.local_addr().unwrap().port();
     let address = format!("http://127.0.0.1:{}", port);
