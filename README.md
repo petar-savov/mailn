@@ -11,3 +11,6 @@ Run with
 Test with
 
 > cargo test
+
+Demo username and password for /login
+admin / everythinghastostartsomewhere
