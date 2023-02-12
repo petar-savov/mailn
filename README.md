@@ -1,16 +1,28 @@
-Email newsletter API from [Zero to Production in Rust](https://www.zero2prod.com/). 
+Email newsletter API from [Zero to Production in Rust](https://www.zero2prod.com/). Includes an async REST API, subscriber management, retry-safe content delivery, authentication and logging. Uses
 
-To launch a database
+- [Actix Web](https://actix.rs/)
+- [SQLx](https://github.com/launchbadge/sqlx)
+- [Tracing](https://docs.rs/tracing/latest/tracing/)
+- PostgreSQL
+- Redis
+
+---
+
+To launch a database locally using Docker:
 
 > ./scripts/init_db.sh
+
+To launch a Redis container locally:
+
+> ./scripts/init_redis.sh
 
 Run with
 
 > cargo run
 
-Test with
+Run all tests with
 
 > cargo test
 
-Demo username and password for /login
-admin / everythinghastostartsomewhere
+Demo username/password for /login
+> admin / everythinghastostartsomewhere
